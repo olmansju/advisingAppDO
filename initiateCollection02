@@ -1,0 +1,8 @@
+const MongoCl = require("mongodb").MongoClient;
+
+async function main() {
+  let res;
+  let mongoDBpasswd = MONGODBPASSWD;
+  let mongoDBloc = `mongodb+srv://doadmin:${mongoDBpasswd}@db-mongodb-nyc1-justin-e6fb3627.mongo.ondigitalocean.com/admin?tls=true&authSource=admin&replicaSet=db-mongodb-nyc1-justin`;
+  const client = await MongoCl.connect(mongoDBloc, {useNewUrlParser: true})
+}
